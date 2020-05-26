@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fechamento.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+
+    <title>Fechamento</title>
+</head>
+
+<body>
+    <!--Barra de Navegação-->
+    <div class="col-sm-4" id="coluna-navbar">
+        <nav class="navbar-left">
+            <!--Botão Home-->
+            <a href="index.html"><img src="img/home.png" class="botao-home"></a>
+            <!--Botão Usuário-->
+            <div class="user-button btn-group dropright" role="group">
+                <input type="image" class="botao-user" src="img/user.png" class="btn btn-secondary dropdown-toggle"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="perfil.html">Perfil</a>
+                    <a class="dropdown-item" href="configuracoes.html">Configurações</a>
+                    <a class="dropdown-item" href="login.html">Sair</a>
+                </div>
+            </div>
+            <!--Botão Lead-->
+            <div class="user-button btn-group dropright" role="group">
+                <input type="image" class="botao-lead" src="img/lead.png" class="btn btn-secondary dropdown-toggle"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="lead-docs.html">Tabela docs</a>
+                    <a class="dropdown-item" href="lead-tabela.html">Tabela HTML</a>
+                </div>
+            </div>
+            <!--Botão Negócios-->
+            <div class="user-button btn-group dropright" role="group">
+                <input type="image" class="botao-negocios" src="img/negocios.svg"
+                    class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="negociacoes.html">Negociações</a>
+                    <a class="dropdown-item" href="#">Adicionar</a>
+                </div>
+            </div>
+            <!--Botão Fechamento-->
+            <div class="user-button btn-group dropright" role="group">
+                <input type="image" class="botao-fechamento" src="img/fechamento.svg"
+                    class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="fechamento.html">Fechamentos</a>
+                    <a class="dropdown-item" href="#">Adicionar</a>
+                </div>
+            </div>
+            <!--Botão Vendas-->
+            <div class="user-button btn-group dropright" role="group">
+                <input type="image" class="botao-vendas" src="img/vendas.svg" class="btn btn-secondary dropdown-toggle"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <a class="dropdown-item" href="#">Vendas</a>
+                    <a class="dropdown-item" href="#">Detalhes</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--Fim Barra de Navegação-->
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--Botão Venda Finalizada-->
+            <div class="botao">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+                    Adicionar Nova Venda Finalizada
+                </button>
+            </div>
+            <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Dados do Comprador</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Nome:</label>
+                                <input type="text" class="form-control">
+                                <label>Telefone:</label>
+                                <input type="text" class="form-control">
+                                <label>Data da venda:</label>
+                                <input type="date" class="form-control">
+                                <label>Valor da venda (R$):</label>
+                                <input type="text" class="form-control">
+                                <label>Itens vendidos:</label>
+                                <input type="text" class="form-control">
+                                <form>
+                                    <input type="file" name="arquivos" multiple class="arquivo">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal" id="button-adicionar">Cadastrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Fim Botão Venda Finalizada-->
+            <div class="cards">
+                <div class="back">
+                    <div class="form-group">
+                        <div class="configu">
+                            <b>Nome do Comprador:</b> Roberto Pedro de Lima
+                        </div>
+                        <div class="config">
+                            <b>Telefone do Comprador:</b> (11) 93645-7676
+                        </div>
+                        <div class="config">
+                            <b>Data da Venda:</b> 14/05/2020
+                        </div>
+                        <div class="config">
+                            <b>Valor da Venda (R$):</b> 2.576,99
+                        </div>
+                        <div class="config">
+                            <b>Itens Vendidos:</b> 3 Unidades do Pacote BH
+                        </div>
+                    </div>
+                </div>
+                <div class="back2">
+                    <div class="form-group">
+                        <div class="configu">
+                            <b>Nome do Comprador:</b> Pedro Damaceno da Silva
+                        </div>
+                        <div class="config">
+                            <b>Telefone do Comprador:</b> (11) 98345-8493
+                        </div>
+                        <div class="config">
+                            <b>Data da Venda:</b> 01/02/2020
+                        </div>
+                        <div class="config">
+                            <b>Valor da Venda (R$):</b> 4.925,32
+                        </div>
+                        <div class="config">
+                            <b>Itens Vendidos:</b> 7 Unidades do Pacote A
+                        </div>
+                    </div>
+                </div>
+                <div class="back3">
+                    <div class="form-group">
+                        <div class="configu">
+                            <b>Nome do Comprador:</b> Felipe Ramos de Oliveira
+                        </div>
+                        <div class="config">
+                            <b>Telefone do Comprador:</b> (11) 94343-3232
+                        </div>
+                        <div class="config">
+                            <b>Data da Venda:</b> 02/03/2020
+                        </div>
+                        <div class="config">
+                            <b>Valor da Venda (R$):</b> 1.337,77
+                        </div>
+                        <div class="config">
+                            <b>Itens Vendidos:</b> 2 Unidades do Pacote JJ
+                        </div>
+                    </div>
+                </div>
+                <div class="back4">
+                    <div class="form-group">
+                        <div class="configu">
+                            <b>Nome do Comprador:</b> Paula Turquetto da Silva
+                        </div>
+                        <div class="config">
+                            <b>Telefone do Comprador:</b> (11) 98293-0909
+                        </div>
+                        <div class="config">
+                            <b>Data da Venda:</b> 05/05/2020
+                        </div>
+                        <div class="config">
+                            <b>Valor da Venda (R$):</b> 5.926,89
+                        </div>
+                        <div class="config">
+                            <b>Itens Vendidos:</b> 5 Unidades do Pacote IW
+                        </div>
+                    </div>
+                </div>
+                <div class="back5">
+                    <div class="form-group">
+                        Total de Vendas:<br>R$14.766,97
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/fechamento.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

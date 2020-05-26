@@ -1,0 +1,52 @@
+#coluna-navbar{
+    width: 120px;
+    height: 100%;
+    border: solid black 1px;
+    border-radius: 5px 10px 10px 5px;
+    background-color: whitesmoke;
+    position: fixed;
+}
+
+.botao-home{
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 100%;
+}
+
+.botao-user{
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 30px;
+    border-radius: 100%;
+}
+
+.botao-lead{
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 40px;
+}
+
+.botao-negocios{
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+
+.botao-fechamento{
+    width: 75px;
+    height: 75px;
+    margin-left: 5px;
+    margin-top: 40px;
+}
+
+.botao-vendas{
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    margin-top: 45px;   
+}

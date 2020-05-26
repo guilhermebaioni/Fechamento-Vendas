@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/navbar.css">
+  <title>Vendas</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <!--parte do menu de login-->
+  <script>
+    function login() {
+      window.location.href = "login.html"
+    }
+    var campos = [
+    ];
+    function cadastroCliente() {
+      alert("Cliente cadastrado!")
+    }
+  </script>
+  <!--fim do menu de login-->
+
+  <!--estilo pra ficar tudo em uma pagina só :sadcat:-->
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(-90deg, #00bfff, #97ffff);
+    }
+
+    .back {
+      background-color: rgb(255, 255, 255);
+      width: auto;
+      height: 300px;
+      padding: 10mm 10mm 10mm 10mm;
+      border: 10px;
+    }
+
+    .m-auto {
+      border: solid black 1px;
+      height: 72%;
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      z-index: 9;
+    }
+
+    .tabela {
+      background-color: whitesmoke;
+      align-content: center;
+      text-align: center;
+      width: 70vh;
+      margin: 0 auto;
+      color: black;
+    }
+
+    .detalhes {
+      background-color: silver;
+      align-content: center;
+      text-align: center;
+      width: 70vh;
+      margin: 0 auto;
+      color: black;
+    }
+
+    button {
+      background-color: transparent;
+      color: #007bff;
+      border-color: #007bff;
+      cursor: pointer;
+      overflow: visible;
+      font-size: 1rem;
+      line-height: 1.5;
+      border-radius: .25rem;
+    }
+
+    h2 {
+      padding-bottom: 1%;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <!--Barra de Navegação-->
+  <div class="col-sm-4" id="coluna-navbar">
+    <nav class="navbar-left">
+      <!--Botão Home-->
+      <a href="index.html"><img src="img/home.png" class="botao-home"></a>
+      <!--Botão Usuário-->
+      <div class="user-button btn-group dropright" role="group">
+        <input type="image" class="botao-user" src="img/user.png" class="btn btn-secondary dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="perfil.html">Perfil</a>
+          <a class="dropdown-item" href="configuracoes.html">Configurações</a>
+          <a class="dropdown-item" href="login.html">Sair</a>
+        </div>
+      </div>
+      <!--Botão Lead-->
+      <div class="user-button btn-group dropright" role="group">
+        <input type="image" class="botao-lead" src="img/lead.png" class="btn btn-secondary dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="lead-docs.html">Tabela docs</a>
+          <a class="dropdown-item" href="lead-tabela.html">Tabela HTML</a>
+        </div>
+      </div>
+      <!--Botão Negócios-->
+      <div class="user-button btn-group dropright" role="group">
+        <input type="image" class="botao-negocios" src="img/negocios.svg" class="btn btn-secondary dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="negociacoes.html">Negociações</a>
+          <a class="dropdown-item" href="#">Adicionar</a>
+        </div>
+      </div>
+      <!--Botão Fechamento-->
+      <div class="user-button btn-group dropright" role="group">
+        <input type="image" class="botao-fechamento" src="img/fechamento.svg" class="btn btn-secondary dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="fechamento.html">Fechamentos</a>
+          <a class="dropdown-item" href="#">Adicionar</a>
+        </div>
+      </div>
+      <!--Botão Vendas-->
+      <div class="user-button btn-group dropright" role="group">
+        <input type="image" class="botao-vendas" src="img/vendas.svg" class="btn btn-secondary dropdown-toggle"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+          <a class="dropdown-item" href="#">Vendas</a>
+          <a class="dropdown-item" href="#">Detalhes</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--Fim Barra de Navegação-->
+
+  <table class="tabela">
+    <tr>
+      <th>Vendas</th>
+      <th>Data</th>
+      <th>Total</th>
+      <th>Mais detalhes</th>
+    </tr>
+    <tr>
+      <td>Venda nº : 0001</td>
+      <td>25 / 04 / 2020</td>
+      <td>R$: 200,00</td>
+      <td><button><a href="javascript: abrir1();">Mais detalhes</a></button></td>
+    </tr>
+    <tr>
+      <td>Venda nº : 0002</td>
+      <td> 26 / 04 / 2020</td>
+      <td>R$: 147,00</td>
+      <td><button><a href="javascript: abrir2();">Mais detalhes</a></button></td>
+    </tr>
+    <tr>
+      <td>Venda nº : 0003</td>
+      <td> 27 / 04 / 2020</td>
+      <td>R$: 1230,00</td>
+      <td><button><a href="javascript: abrir3();">Mais detalhes</a></button></td>
+    </tr>
+    <tr>
+      <td>Venda nº : 0004</td>
+      <td> 28 / 04 / 2020</td>
+      <td>R$: 156,00</td>
+      <td><button><a href="javascript: abrir4();">Mais detalhes</a></button></td>
+    </tr>
+    <tr>
+      <td>Venda nº : 0005</td>
+      <td> 29 / 04 / 2020</td>
+      <td>R$: 245,00</td>
+      <td><button><a href="javascript: abrir5();">Mais detalhes</a></button></td>
+    </tr>
+    <tr>
+      <td>Venda nº : 0006</td>
+      <td> 30 / 04 / 2020</td>
+      <td>R$: 567,00</td>
+      <td><button><a href="javascript: abrir6();">Mais detalhes</a></button></td>
+    </tr>
+    <tr>
+      <td>Venda nº : 0007</td>
+      <td> 01 / 05 / 2020</td>
+      <td>R$: 874,00</td>
+      <td><button><a href="javascript: abrir7();">Mais detalhes</a></button></td>
+    </tr>
+
+
+  </table>
+
+  <!--popup style-->
+  <style>
+    .tabela {
+      position: absolute;
+      width: 50%;
+      height: 70%;
+      border-radius: 1% 1%;
+      margin-top: 6%;
+      margin-left: 27%;
+    }
+
+    .popup {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 800px;
+      height: 500px;
+      padding: 20px;
+      border: solid 1px black;
+      border-radius: 1% 1%;
+      display: none;
+      background-color: whitesmoke;
+    }
+  </style>
+
+  <div id="popup1" class="popup">
+    <table class="detalhes">
+      <tr>
+        <th>Venda nº : 0001</th>
+        <th>25 / 04 / 2020</th>
+        <th>Total R$: 200,00</th>
+      </tr>
+      <tr>
+        <td>Produto xyz</td>
+        <td>2 unidades </td>
+        <td>R$: 100,00</td>
+      </tr>
+      <tr>
+        <td>Produto abc</td>
+        <td>4 unidades </td>
+        <td>R$: 100,00</td>
+      </tr>
+    </table>
+    <button style="margin-left: 700px; margin-top: 350px;"><a href="javascript: fechar1();">Fechar</a></button>
+  </div>
+  <div id="popup2" class="popup">
+    <table>
+      <tr>
+        <th>Venda nº : 0002</th>
+        <td> 26 / 04 / 2020</td>
+        <td>R$: 147,00</td>
+      </tr>
+      <tr>
+        <td>Produto xyrz</td>
+        <td>4 unidades </td>
+        <td>R$: 16,00</td>
+      </tr>
+      <tr>
+        <td>Produto abc</td>
+        <td>4 unidades </td>
+        <td>R$: 131,00</td>
+      </tr>
+    </table>
+    <button style="margin-left: 700px; margin-top: 350px;"><a href="javascript: fechar2();">Fechar</a></button>
+  </div>
+  <div id="popup3" class="popup">
+    <table>
+      <tr>
+        <td>Venda nº : 0003</td>
+        <td> 27 / 04 / 2020</td>
+        <td>R$: 1230,00</td>
+      </tr>
+      <tr>
+        <td>Produto fgh</td>
+        <td>1 unidade </td>
+        <td>R$: 1000,00</td>
+      </tr>
+      <tr>
+        <td>Produto abc</td>
+        <td>4 unidades </td>
+        <td>R$: 230,00</td>
+      </tr>
+    </table>
+    <button style="margin-left: 700px; margin-top: 350px;"><a href="javascript: fechar3();">Fechar</a></button>
+  </div>
+  <div id="popup4" class="popup">
+    <table>
+      <tr>
+        <td>Venda nº : 0004</td>
+        <td> 28 / 04 / 2020</td>
+        <td>R$: 156,00</td>
+      </tr>
+      <tr>
+        <td>Produto dersya</td>
+        <td>2 unidades </td>
+        <td>R$: 100,00</td>
+      </tr>
+      <tr>
+        <td>Produto apoi</td>
+        <td>4 unidades </td>
+        <td>R$: 56,00</td>
+      </tr>
+    </table>
+    <button style="margin-left: 700px; margin-top: 350px;"><a href="javascript: fechar4();">Fechar</a></button>
+  </div>
+  <div id="popup5" class="popup">
+    <table>
+      <tr>
+        <td>Venda nº : 0005</td>
+        <td> 29 / 04 / 2020</td>
+        <td>R$: 245,00</td>
+      </tr>
+      <tr>
+        <td>Produto ruafmfm</td>
+        <td>2 unidades </td>
+        <td>R$: 200,00</td>
+      </tr>
+      <tr>
+        <td>Produto hue</td>
+        <td>1 unidade </td>
+        <td>R$: 45,00</td>
+      </tr>
+    </table>
+    <button style="margin-left: 700px; margin-top: 350px;"><a href="javascript: fechar5();">Fechar</a></button>
+  </div>
+  <div id="popup6" class="popup">
+    <table>
+      <tr>
+        <td>Venda nº : 0006</td>
+        <td> 30 / 04 / 2020</td>
+        <td>R$: 567,00</td>
+      </tr>
+      <tr>
+        <td>Produto deida</td>
+        <td>10 unidades </td>
+        <td>R$: 250,00</td>
+      </tr>
+      <tr>
+        <td>Produto hoxe</td>
+        <td>1 unidade </td>
+        <td>R$: 317,00</td>
+      </tr>
+    </table>
+    <button style="margin-left: 700px; margin-top: 350px;"><a href="javascript: fechar6();">Fechar</a></button>
+  </div>
+  <div id="popup7" class="popup">
+    <table>
+      <tr>
+        <td>Venda nº : 0007</td>
+        <td> 01 / 05 / 2020</td>
+        <td>R$: 874,00</td>
+      </tr>
+      <tr>
+        <td>Produto guirs</td>
+        <td>2 unidades </td>
+        <td>R$: 500,00</td>
+      </tr>
+      <tr>
+        <td>Produto remd</td>
+        <td>4 unidades </td>
+        <td>R$: 374,00</td>
+      </tr>
+    </table>
+    <button style="margin-left: 700px; margin-top: 350px;"><a href="javascript: fechar7();">Fechar</a></button>
+  </div>
+
+
+
+
+  <script type="text/javascript">
+    function abrir1() {
+      document.getElementById('popup1').style.display = 'block';
+    }
+    function abrir2() {
+      document.getElementById('popup2').style.display = 'block';
+    }
+    function abrir3() {
+      document.getElementById('popup3').style.display = 'block';
+    }
+    function abrir4() {
+      document.getElementById('popup4').style.display = 'block';
+    }
+    function abrir5() {
+      document.getElementById('popup5').style.display = 'block';
+    }
+    function abrir6() {
+      document.getElementById('popup6').style.display = 'block';
+    }
+    function abrir7() {
+      document.getElementById('popup7').style.display = 'block';
+    }
+
+    function fechar1() {
+      document.getElementById('popup1').style.display = 'none';
+    }
+    function fechar2() {
+      document.getElementById('popup2').style.display = 'none';
+    }
+    function fechar3() {
+      document.getElementById('popup3').style.display = 'none';
+    }
+    function fechar4() {
+      document.getElementById('popup4').style.display = 'none';
+    }
+    function fechar5() {
+      document.getElementById('popup5').style.display = 'none';
+    }
+    function fechar6() {
+      document.getElementById('popup6').style.display = 'none';
+    }
+    function fechar7() {
+      document.getElementById('popup7').style.display = 'none';
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>
